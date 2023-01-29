@@ -1,3 +1,3 @@
 <?php 
-echo 'Hello Worlo';
+header './p4-oc-ohmyfood/index.html';
 ?>
