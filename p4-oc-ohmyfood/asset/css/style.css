@@ -1,0 +1,907 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("../../font/roboto/Roboto-Medium.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Roboto-Light";
+  src: url("../../font/roboto/Roboto-Light.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Shrikhand";
+  src: url("../../font/Shrikhand/Shrikhand-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+@-webkit-keyframes scale-up-hor-right {
+  0% {
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: 100% 100%;
+    transform-origin: 100% 100%;
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    -webkit-transform-origin: 100% 100%;
+    transform-origin: 100% 100%;
+  }
+}
+@keyframes scale-up-hor-right {
+  0% {
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: 100% 100%;
+    transform-origin: 100% 100%;
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    -webkit-transform-origin: 100% 100%;
+    transform-origin: 100% 100%;
+  }
+}
+@-webkit-keyframes scale-up-hor-left {
+  0% {
+    -webkit-transform: scaleX(0.8);
+    transform: scaleX(0.8);
+    -webkit-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    -webkit-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+  }
+}
+@keyframes scale-up-hor-left {
+  0% {
+    -webkit-transform: scaleX(0.8);
+    transform: scaleX(0.8);
+    -webkit-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    -webkit-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+  }
+}
+@-webkit-keyframes slide-left {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-65px);
+    transform: translateX(-65px);
+  }
+}
+@keyframes slide-left {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-65px);
+    transform: translateX(-65px);
+  }
+}
+@-webkit-keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h2, h3 {
+  font-family: "Roboto";
+}
+
+p, a {
+  font-family: "Roboto-Light";
+}
+
+h1 {
+  font-family: "Shrikhand";
+}
+
+.directionRow {
+  display: flex;
+  flex-direction: row;
+}
+
+.directionColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  margin: 0;
+  padding: 20px 0 10px 0;
+  box-shadow: 0 0 5px 0 grey;
+  position: relative;
+  z-index: 1;
+}
+
+.logo, nav p {
+  display: flex;
+  justify-content: center;
+}
+.logo img, nav p img {
+  width: 60%;
+}
+
+nav {
+  position: relative;
+  z-index: auto;
+}
+
+.location {
+  width: 100%;
+  padding: 5px 0 5px 0;
+  margin: 0 0 0 0;
+  font-family: "Roboto-Light";
+  background-color: #EAEAEA;
+}
+.location p {
+  font-weight: 700;
+}
+.location i {
+  margin-right: 10px;
+}
+
+.nav {
+  background-color: #F6F6F6;
+  padding: 5px 0 40px 0;
+  text-align: center;
+}
+.nav_button {
+  width: 300px;
+  text-decoration: none;
+  text-align: center;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  border-color: inherit;
+  color: white;
+  font-family: "Roboto-Light";
+  border-radius: 25px;
+  padding: 15px 0 15px 0;
+  box-shadow: 0 2px 10px 0px grey;
+  background: linear-gradient(177deg, #ff79DA, #9356DC);
+}
+.nav_button:hover {
+  opacity: 0.5;
+}
+
+.titre-fonctionnement {
+  margin: 30px 0 0 20px;
+}
+
+.fonctionnement div {
+  width: 90%;
+  margin: 20px auto 0 auto;
+  padding: 10px 0 10px 0;
+  justify-content: center;
+  align-items: center;
+  background-color: #F6F6F6;
+  box-shadow: 0 0 10px 0 #D2D2D2;
+  border-radius: 20px;
+}
+.fonctionnement div i {
+  position: relative;
+  color: #7E7E7E;
+  left: 0;
+  width: auto;
+  margin-right: 5px;
+}
+@media screen and (min-width: 400px) {
+  .fonctionnement div i {
+    margin-right: 40px;
+  }
+}
+.fonctionnement div:hover {
+  background-color: #F5EDFF;
+}
+.fonctionnement div:hover i {
+  color: #9356DC;
+}
+.fonctionnement div .icon-number {
+  position: absolute;
+  left: 3.5%;
+  margin-top: 0;
+  text-align: center;
+  color: white;
+  background-color: #9356DC;
+  width: 22px;
+  height: 22px;
+  padding: 7px 6px 5px 6px;
+  border-radius: 25px;
+  font-family: "Roboto";
+}
+
+.restaurants {
+  margin: 50px 0 0 0;
+  padding: 50px 30px 15px 30px;
+  background-color: #F6F6F6;
+}
+.restaurants .groupe-menu {
+  background-color: #F6F6F6;
+}
+.restaurants .groupe-menu div {
+  width: 100%;
+  margin: 20px 0 40px 0;
+  padding: 0 0 10px 0;
+  position: relative;
+  left: auto;
+  right: auto;
+  border-radius: 20px;
+  box-shadow: 0 0 10px 0 #D2D2D2;
+}
+.restaurants .groupe-menu .etiquette {
+  background-color: #99E2D0;
+  font-family: "Roboto";
+  font-size: 14px;
+  width: 100px;
+  color: #008766;
+  text-align: center;
+  border-radius: 5px;
+  position: absolute;
+  right: 20px;
+  top: 0;
+  padding-top: 7.5px;
+}
+.restaurants img {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  text-align: center;
+  border-radius: 20px 20px 0 0;
+  object-fit: cover;
+}
+.restaurants h2 {
+  margin: 0 0 50px 0;
+}
+.restaurants h3, .restaurants p {
+  margin: 10px 0 0 20px;
+}
+.restaurants i {
+  position: absolute;
+  right: 20px;
+  bottom: 30px;
+  opacity: 1;
+}
+.restaurants i:hover {
+  opacity: 0;
+}
+.restaurants div a {
+  color: black;
+  font-style: none;
+  text-decoration: none;
+}
+.restaurants .icon-hover {
+  position: absolute;
+  right: 20px;
+  bottom: 30px;
+  opacity: 0;
+}
+.restaurants .icon-hover:hover {
+  opacity: 1;
+  background: -webkit-linear-gradient(#9356DC, #ff79DA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+footer {
+  color: white;
+  background-color: #353535;
+}
+footer .footer--container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 25px;
+}
+footer h3 {
+  font-family: "Shrikhand";
+  margin-bottom: 25px;
+}
+footer a, footer p {
+  margin-bottom: 15px;
+}
+footer .fa-utensils {
+  margin-right: 10px;
+}
+footer .fa-handshake-angle {
+  margin-right: 5px;
+}
+footer .contact {
+  text-decoration: none;
+  color: white;
+}
+footer .footer--icon-Desktop {
+  display: none;
+}
+
+@keyframes apparition {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+#apparition1 {
+  animation: apparition 1s;
+}
+
+#apparition2 {
+  animation: apparition 1.5s;
+}
+
+#apparition3 {
+  animation: apparition 2s;
+}
+
+#apparition4 {
+  animation: apparition 2.5s;
+}
+
+#apparition5 {
+  animation: apparition 3s;
+}
+
+.nav--AlaFrancaise div img {
+  width: 162px;
+}
+.nav--arrow a {
+  position: absolute;
+  top: 0;
+  left: 25px;
+  font-size: 25px;
+  color: black;
+  text-decoration: none;
+}
+.nav--logoOhmyfood {
+  width: 100%;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.presentation {
+  margin-top: 30px;
+  width: 100%;
+  display: flex;
+}
+.presentation img {
+  width: 100%;
+  height: 275px;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.main--container {
+  width: 100%;
+  padding-bottom: 20px;
+  background-color: #F6F6F6;
+  margin-top: -50px;
+  z-index: 2;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+}
+.main--container div {
+  padding: 5px;
+}
+.main--container h1 {
+  margin: 20px 0 0 10px;
+  font-size: 26px;
+}
+.main--container .title-size h1 {
+  margin: 23px 0 0 10px;
+  font-size: 22px;
+}
+.main--container div h2 {
+  width: 50px;
+  font-size: 18px;
+  font-family: "Roboto-Light";
+  border-bottom: 2px solid #99E2D0;
+  padding-bottom: 5px;
+  font-weight: 100 !important;
+}
+.main--container .main-title i {
+  position: absolute;
+  font-size: 25px;
+  right: 50px;
+  top: 350px;
+  opacity: 1;
+}
+.main--container .main-title i:hover {
+  opacity: 0;
+}
+.main--container .main-title .icon-hover {
+  position: absolute;
+  font-size: 25px;
+  right: 50px;
+  top: 350px;
+  opacity: 0;
+}
+.main--container .main-title .icon-hover:hover {
+  opacity: 1;
+  background: -webkit-linear-gradient(#9356DC, #ff79DA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.main--container .repas {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: white;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  margin-bottom: 20px;
+  height: 80px;
+  z-index: 2;
+}
+.main--container .repas .directionColumn {
+  display: flex;
+  flex-direction: column;
+}
+.main--container .repas h3 {
+  font-family: "Roboto";
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+.main--container .repas div {
+  max-width: 60vw;
+  display: flex;
+  flex-direction: row;
+  margin-top: -10px;
+}
+.main--container .repas .overflow-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.main--container .repas .price {
+  margin-top: -5px;
+  position: absolute;
+  right: 25px;
+}
+.main--container .repas .btn {
+  position: absolute;
+  right: 15px;
+  color: #99E2D0;
+  margin-top: 0;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background-color: #99E2D0;
+  height: 80px;
+  width: 65px;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+}
+.main--container .repas .check {
+  background-color: white;
+  border-radius: 30px;
+  width: 30px;
+  height: 30px;
+  justify-content: center;
+  align-items: center;
+}
+.main--container .repas:hover .btn {
+  opacity: 1;
+  -webkit-animation: scale-up-hor-right 0.8s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: scale-up-hor-right 0.8s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+.main--container .repas:hover .price {
+  -webkit-animation: slide-left 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-left 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+.main--container .repas:hover .check {
+  -webkit-animation: rotate-center 0.8s ease-in-out both;
+  animation: rotate-center 0.8s ease-in-out both;
+}
+.main--container .repas:hover .overflow-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 90%;
+}
+.main--container a {
+  text-decoration: none;
+}
+.main--container a .div_commander {
+  width: 50%;
+  text-align: center;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  border-color: inherit;
+  color: white;
+  font-family: "Roboto-Light";
+  border-radius: 25px;
+  padding: 15px 0 15px 0;
+  box-shadow: 0 2px 10px 0px grey;
+  background: linear-gradient(177deg, #ff79DA, #9356DC);
+}
+.main--container a .div_commander:hover {
+  opacity: 0.5;
+}
+
+@media screen and (min-width: 1024px) {
+  .logo, nav h4 {
+    display: flex;
+    justify-content: center;
+  }
+  .logo img, nav h4 img {
+    width: 30%;
+  }
+  .titre-fonctionnement {
+    margin: 50px 0 20px 12%;
+  }
+  .fonctionnement {
+    width: 80%;
+    margin: 0 auto 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .fonctionnement div {
+    width: 30%;
+    padding: 10px 0 10px 0;
+    justify-content: center;
+    align-items: center;
+    background-color: #F6F6F6;
+    box-shadow: 0 0 10px 0 #D2D2D2;
+    border-radius: 20px;
+  }
+  .fonctionnement div i {
+    left: -10px;
+    width: auto;
+    margin-right: 5px;
+  }
+  .fonctionnement div:hover {
+    background-color: #F5EDFF;
+  }
+  .fonctionnement div:hover i {
+    color: #9356DC;
+  }
+  .fonctionnement .directionRow {
+    position: relative;
+  }
+  .fonctionnement .directionRow .icon-number {
+    left: -20px;
+    margin-top: 0;
+    text-align: center;
+    color: white;
+    background-color: #9356DC;
+    width: 22px;
+    height: 22px;
+    padding: 5px;
+    border-radius: 25px;
+  }
+  .restaurants {
+    margin: 50px 0 0 0;
+    padding: 50px 30px 15px 30px;
+    background-color: #F6F6F6;
+  }
+  .restaurants .groupe-menu {
+    background-color: #F6F6F6;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .restaurants .groupe-menu div {
+    width: 48%;
+    margin: 20px 0 40px 0;
+    padding: 0 0 10px 0;
+    position: relative;
+    left: auto;
+    right: auto;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 0 #D2D2D2;
+  }
+  .restaurants .groupe-menu .etiquette {
+    background-color: #99E2D0;
+    font-family: "Roboto";
+    font-size: 14px;
+    width: 100px;
+    color: #008766;
+    text-align: center;
+    border-radius: 5px;
+    position: absolute;
+    right: 20px;
+    top: 0;
+    padding-top: 7.5px;
+  }
+  .restaurants img {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    text-align: center;
+    border-radius: 20px 20px 0 0;
+    object-fit: cover;
+  }
+  .restaurants h2 {
+    margin: 0 0 50px 10%;
+  }
+  .restaurants h3, .restaurants p {
+    margin: 10px 0 0 20px;
+  }
+  .restaurants i {
+    position: absolute;
+    right: 20px;
+    bottom: 30px;
+    opacity: 1;
+  }
+  .restaurants i:hover {
+    opacity: 0;
+  }
+  .restaurants div a {
+    color: black;
+    font-style: none;
+    text-decoration: none;
+  }
+  .restaurants .icon-hover {
+    position: absolute;
+    right: 20px;
+    bottom: 30px;
+    opacity: 0;
+  }
+  .restaurants .icon-hover:hover {
+    opacity: 1;
+    background: -webkit-linear-gradient(#9356DC, #ff79DA);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  footer {
+    padding-top: 20px;
+    color: white;
+    background-color: #353535;
+  }
+  footer .footer--container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  footer .footer--icon {
+    display: none;
+  }
+  footer h3 {
+    font-family: "Shrikhand";
+    margin-top: 10px;
+  }
+  footer a, footer p {
+    margin-bottom: 15px;
+    margin-left: 30px;
+  }
+  footer .contact {
+    text-decoration: none;
+    color: white;
+  }
+  footer .footer--icon-Desktop {
+    display: flex;
+    margin-left: 30px;
+  }
+  .nav--AlaFrancaise div img {
+    width: 162px;
+  }
+  .nav--arrow a {
+    position: absolute;
+    top: 0;
+    left: 25px;
+    font-size: 25px;
+    color: black;
+    text-decoration: none;
+  }
+  .nav--logoOhmyfood {
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+  }
+  .presentation {
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+  }
+  .presentation img {
+    width: 100%;
+    height: 275px;
+    object-fit: cover;
+    z-index: -1;
+  }
+  .main--container {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 20px;
+    background-color: #F6F6F6;
+    margin-top: -50px;
+    z-index: 2;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+  }
+  .main--container div {
+    padding: 5px;
+  }
+  .main--container h1 {
+    margin: 20px 0 0 10px;
+    font-size: 26px;
+    justify-content: center;
+  }
+  .main--container .title-size h1 {
+    margin: 20px 0 0 10px;
+    font-size: 26px;
+  }
+  .main--container div h2 {
+    width: 50px;
+    font-size: 18px;
+    font-family: "Roboto-Light";
+    border-bottom: 2px solid #99E2D0;
+    padding-bottom: 5px;
+    font-weight: 100 !important;
+    margin-left: 15%;
+    margin-right: auto;
+  }
+  .main--container .main-title h1 {
+    display: flex;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .main--container .main-title i {
+    position: absolute;
+    font-size: 30px;
+    margin-right: 300px;
+    top: 350px;
+    opacity: 1;
+  }
+  .main--container .main-title i:hover {
+    opacity: 0;
+  }
+  .main--container .main-title .icon-hover {
+    position: absolute;
+    font-size: 30px;
+    margin-right: 300px;
+    top: 350px;
+    opacity: 0;
+  }
+  .main--container .main-title .icon-hover:hover {
+    opacity: 1;
+    background: -webkit-linear-gradient(#9356DC, #ff79DA);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .main--container .repas {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 80px;
+    width: 70%;
+    z-index: 2;
+  }
+  .main--container .repas .directionColumn {
+    display: flex;
+    flex-direction: column;
+  }
+  .main--container .repas h3 {
+    font-family: "Roboto";
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
+  .main--container .repas div {
+    max-width: 60vw;
+    display: flex;
+    flex-direction: row;
+    margin-top: -10px;
+  }
+  .main--container .repas .overflow-ellipsis {
+    white-space: nowrap;
+    overflow: visible;
+    text-overflow: ellipsis;
+  }
+  .main--container .repas .price {
+    margin-top: -5px;
+    position: absolute;
+    right: 25px;
+  }
+  .main--container .repas .btn {
+    right: 0;
+    margin-top: 0;
+    color: #99E2D0;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: #99E2D0;
+    height: 80px;
+    width: 65px;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+  }
+  .main--container .repas .check {
+    background-color: white;
+    border-radius: 30px;
+    width: 30px;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+  }
+  .main--container .repas:hover .btn {
+    opacity: 1;
+    -webkit-animation: scale-up-hor-right 0.8s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+    animation: scale-up-hor-right 0.8s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  }
+  .main--container .repas:hover .price {
+    -webkit-animation: slide-left 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation: slide-left 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  }
+  .main--container .repas:hover .check {
+    -webkit-animation: rotate-center 0.8s ease-in-out both;
+    animation: rotate-center 0.8s ease-in-out both;
+  }
+  .main--container .repas:hover .overflow-ellipsis {
+    white-space: nowrap;
+    overflow: visible;
+    text-overflow: ellipsis;
+  }
+  .main--container a {
+    text-decoration: none;
+  }
+  .main--container a .div_commander {
+    width: 50%;
+    text-align: center;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    border-color: inherit;
+    color: white;
+    font-family: "Roboto-Light";
+    border-radius: 25px;
+    padding: 15px 0 15px 0;
+    box-shadow: 0 2px 10px 0px grey;
+    background: linear-gradient(177deg, #ff79DA, #9356DC);
+  }
+  .main--container a .div_commander:hover {
+    opacity: 0.5;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
