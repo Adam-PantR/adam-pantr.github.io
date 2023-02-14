@@ -112,15 +112,47 @@ header {
 	width: 100%;
 	min-height: 470px;
 	position: relative;
+	transition: transform 0.5s;
+  	transform: translateX(0);
 }
 
-.banner-img {
+#banner .slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+}
+.slider div {
+	display: flex;
+	width: 100vw;
+	height: 470px;
+	position: relative;
+	align-items: center;
+	justify-content: center; 
+}
+
+.slider p {
 	position: absolute;
+	
+}
+/* 
+#banner article {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	min-height: 470px;
+	justify-content: center; 
+	width: 100%;
+} */
+
+.banner-img {
 	width: 100%;
 	height: 100%;
 	z-index: -1;
 	object-fit: cover;
 	object-position: center;
+	
 }
 /* Code CSS en prévision de l'ajout d'un carousel pour la bannière */
 /* Gestion des fleches du carrousel */
@@ -139,6 +171,7 @@ header {
 	position: absolute;
 	bottom: 40px;
 	display: flex;
+	justify-content: center;
 }
 .dot {
 	margin-inline: 5px;
@@ -147,7 +180,8 @@ header {
 	background-color: #ffffff00;
 	border: 3px solid #fff;
 	border-radius: 100%;
-	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);;
+	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+	cursor: pointer;
 }
 .dot_selected {
 	background-color: #fff;
